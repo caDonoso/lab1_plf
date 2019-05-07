@@ -1,0 +1,44 @@
+main (parametro1, parametro2){
+  int var1 = 123;	
+  short var2 = var1 + 10;
+  double var3 = var2 + 1.8;
+  *char var4;
+  if (var1 == 123){
+    for (i = 0; i < 5; i++){
+    
+    }    
+  }
+  else {
+
+  }
+  unsigned var5;
+  long var6;
+  float var7 = sizeof(var6);
+}
+auto extern register static autostatic
+===
+:
+do
+while
+gotowhile
+return var7;
+if (var6 == 7 || var6 == 8 && var2 != 3){
+  var6 = var6 - 1;
+  var7--;
+}
+---
+|||
+<<<
+>>>
+<=
+>=
+<==
+>==
+!!
+??
+//
+%%
+^^
+&&&
++++
+~~

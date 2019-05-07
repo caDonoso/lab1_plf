@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char** argv){
+	if(argc == 0){
+		printf("Error: Faltan par%cmetros.\n",160);
+		printf("Uso: lexico.exe archivo_entrada archivo_salida\n");
+		exit(1);
+	}
+	else if(argc == 1){
+		printf("Error: Falta par%cmetro.\n",160);
+		printf("Uso: lexico.exe archivo_entrada archivo_salida\n");
+		exit(1);
+	}
+	else if(argc > 2){
+		printf("Error: Demasiados par%cmetros.\n",160);
+		printf("Uso: lexico.exe archivo_entrada archivo_salida\n");
+		exit(1);
+	}
+
+	FILE *archivo_entrada;
+	archivo_entrada= fopen (argv[0] + '.txt', 'r');
+	if(archivo_entrada != NULL){
+		FILE *archivo_salida;
+		archivo_salida= fopen (argv[1] + '.txt', 'r');
+		if(archivo_salida != NULL){
+			printf("Error: El archivo de salida ya existe.\n");
+			exit(1);
+		}
+		else{
+			printf("Se genera un nuevo archivo de salida.\n");
+		}
+	}
+	else{
+		printf("Error: El archivo de entrada no existe.\n");
+		exit(1);
+	}
+	fclose(archivo_entrada);
+	return 0;
+}
